@@ -16,7 +16,7 @@ async function getWeatherData(){
   
     .then(response=>response.json());
 
-    if(weatherData.cod === '404' || city ===""){
+    if(weatherData.cod === '404'){
         if(weatherItem.classList.contains('flex')){
             weatherItem.classList.remove('flex');
             weatherItem.classList.add('hidden');
