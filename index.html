@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather API App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bg-slate-50">
+    <div class="flex flex-col justify-between items-center gap-6">
+
+        <div class="flex items-center justify-between flex-col ">
+            <h1 class="text-center text-2xl mt-6">Check Weather</h1>
+            <div 
+            id="search-weather-container"
+            class=" mt-[50px]  border-opacity-100 flex flex-row p-4 justify-around gap-4" 
+            >
+            <input type="text" 
+            placeholder="Type your city"
+            id="city"
+            class="outline-none rounded-sm"
+            required
+            > 
+            <button class="bg-blue-600 text-white p-2 rounded-2xl" onclick="getWeatherData()">Check Weather</button>
+        </div>
+        
+    </div><br>
+    <div id="weather-item" 
+    class="border border-black w-[340px] h-[440px] hidden flex-col items-center justify-evenly rounded-xl"
+    >
+        <h1 class="text-3xl" id="cityName"></h1>
+        <img class="w-[150px] h-[150px]" src="" alt="" id="weather-icon">
+        <p id="description" class="text-[1.2rem]"></p>
+        <h4 class="text-2xl" id="temp"></h4>
+        <div class="flex flex-row gap-4 text-[1.1rem]">
+            <span id="wind-speed" class=""><i class="fa-solid fa-wind"></i></span>
+            <span id="humidity"></span>
+            <span id="pressure"></span>
+        </div>
+    </div>
+    <div id="not-found" class="hidden flex-col items-center justify-center">
+        <img src="assets/not-found.png" alt="not-found">
+        <h1 class="text-xl">Sorry, City not found in our database</h1>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
