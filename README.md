@@ -1,4 +1,4 @@
-####Weather JavaScript project
+###Weather JavaScript project###
 
 #It's simple project for fun. I used [OpenWeatherAPI](https://openweathermap.org/) to show weather data of cities.
 Other things I used in this project:
