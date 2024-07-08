@@ -12,6 +12,9 @@ const pressure = document.getElementById('pressure');
 
 async function getWeatherData(){
     const city = document.getElementById('city').value;
+    if(city!==""){
+
+    
   const weatherData =   await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`)
   
     .then(response=>response.json());
@@ -81,4 +84,8 @@ async function getWeatherData(){
         }
     }
     
+}
+else{
+    alert("Please enter a city name!!!");
+}
 }
